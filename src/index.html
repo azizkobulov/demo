@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/slick.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"> -->
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -20,9 +23,9 @@
                     Официальный представитель <br>
                     <span>Garmin, Polar, Suunto</span>
                 </div>
-                <div class="header__contacts">
+                <div class="header__contact">
                     <a href="+998994381501" class="header__phone">+998 99 438 15 01</a>
-                    <button class="button">Заказать звонок</button>
+                    <button data-modal="consultation" class="button">Заказать звонок</button>
                 </div>
             </header>
             
@@ -32,7 +35,7 @@
 
                 <div class="promo__icons">
                     <div class="promo__icon">
-                        <img src="icons/stopwatch.png" alt="timer">
+                        <img src="icons/chronometer.png" alt="timer">
                          Время подбора: <br>
                          10 минут
                     </div>
@@ -48,7 +51,7 @@
                     </div>
                 </div>
                 
-                <button class="button button_main">Заказать консультацию</button>
+                <button data-modal="consultation" class="button button_main">Заказать консультацию</button>
                 <div class="promo__link">
                      или
                      <a href="#">ПЕРЕЙТИ В КАТАЛОГ</a>
@@ -61,21 +64,436 @@
         <div class="container">
             <h2>Наши преимущества</h2>
             <div class="second__icons">
-                <div class="second__icon"><img src="icons/stopwatch.png" alt="">
+                <div class="second__icon"><img src="icons/running-shoe.png" alt="">
                    <div class="header">Учим бегать</div>
                    <div class="subheader">Помогаем с обучением правильной техники бега</div>
                 </div>
                 
-                <div class="second__icon"><img src="icons/stopwatch.png" alt="">
+                <div class="second__icon"><img src="icons/cardio.png" alt="">
                     <div class="header">Заботимся о здоровье</div>
                     <div class="subheader">Мы работаем для того чтобы ваши занятия спортом шли на пользу вашему здоровью</div>
                 </div>
                 
-                <div class="second__icon"><img src="icons/stopwatch.png" alt="">
+                <div class="second__icon"><img src="icons/trophy.png" alt="">
                    <div class="header">Делимся опытом</div> 
                    <div class="subheader">Наши сотрудники всегда готовы поделиться своим опытом так как сами бегают полумарафоны</div>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="consultation" id="home">
+        <div class="container">
+            <h2 class="title_left">
+                Получите бесплатную консультацию <br>
+                по подбору пульсометра
+            </h2>
+            <div class="consultation__descr">
+                Просто заполните форму заявки <br>
+                и мы перезвоним вам через 10 минут
+            </div>
+
+            <form class="feed-form" action="#">
+                <input name="name" required placeholder="Ваше Имя" type="text">
+                <input name="name" required placeholder="Ваш телефон" type="number">
+                <input name="name" required placeholder="Ваш Email" type="email">
+    
+                <button class="button button_submit">Заказать консультацию</button>
+            </form>
+        </div>
+        
+    </div>
+
+    <section class="carousel">
+    <div class="container">
+        <!-- <div class="carousel__inner">
+            <div>
+                <img src="img/1_photo.jpg" alt="slide">
+            </div>
+            <div>
+                <img src="img/2_photo.jpg" alt="slide">
+            </div>
+            <div>
+                <img src="img/3_photo.jpg" alt="slide">
+            </div>
+        </div> -->
+         
+        <!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/1_photo.jpg" alt="slide">
+              </div>
+              <div class="carousel-item">
+                <img src="img/2_photo.jpg" alt="slide">
+              </div>
+              <div class="carousel-item">
+                <img src="img/3_photo.jpg" alt="slide">
+              </div>
+            </div>
+            
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only"></span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only"></span>
+            </a>
+        </div>     -->
+       
+    </div>
+    </section>
+
+    <section class="catalog">
+        <div class="container">
+           <h2 class="title">Каталог пульсометра</h2>
+           <ul class="catalog__tabs">
+               <li class="catalog__tab catalog__tab_active"><div>Для фитнеса</div></li>
+               <li class="catalog__tab"><div>Для бега</div></li>
+               <li class="catalog__tab"><div>Для триатлона</div></li>
+           </ul>
+           <div class="catalog__content catalog__content_active">
+               <div class="catalog-item">
+                   <div class="catalog-item__wrapper">
+                       <div class="catalog-item__content catalog-item__content_active">
+                         <img src="" alt="" class="catalog-item__img">
+                         <div class="catalog-item__subtitle">Пульсометр Polar M1</div>
+                         <div class="catalog-item__descr">Для первых шагов в тренировк, основанных на сердечном ритме</div>
+                         <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                       </div>
+                       
+                       <ul class="catalog-item__list">
+                        <li>asf,l;as,f;las,
+                            f;sa,f;sa</li>
+                        <li>safsafsafsasfasfsafsafsasaf
+                            fafsaf</li>
+                        <li>safasfasfasf,;as,;salf
+                            sadasdsadsad
+                        </li>
+                        <a href="#" class="catalog-item-back">назад</a>
+                       </ul>
+                   </div>
+                   
+                   <hr>
+
+                   <div class="catalog-item__footer">
+                       <div class="catalog-item__prices">
+                           <div class="catalog-item__old-price">4 750 руб</div>
+                           <div class="catalog-item__price">4 500 руб</div>
+                       </div>
+                       <button class="button button_mini">КУПИТЬ</button>
+                   </div>
+               </div>
+               <div class="catalog-item">
+                <div class="catalog-item__wrapper">
+                    <div class="catalog-item__content catalog-item__content_active">
+                      <img src="" alt="" class="catalog-item__img">
+                      <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
+                      <div class="catalog-item__descr">Для первых шагов в тренировк, основанных на сердечном ритме</div>
+                      <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                    </div>
+                    
+                    <ul class="catalog-item__list">
+                     <li>asf,l;as,f;las,
+                         f;sa,f;sa</li>
+                     <li>safsafsafsasfasfsafsafsasaf
+                         fafsaf</li>
+                     <li>safasfasfasf,;as,;salf
+                         sadasdsadsad
+                     </li>
+                     <a href="#" class="catalog-item-back">назад</a>
+                    </ul>
+                </div>
+                
+                <hr>
+
+                <div class="catalog-item__footer">
+                    <div class="catalog-item__prices">
+                        <div class="catalog-item__old-price">4 750 руб</div>
+                        <div class="catalog-item__price">4 500 руб</div>
+                    </div>
+                    <button class="button button_mini">КУПИТЬ</button>
+                </div>
+               </div>
+               <div class="catalog-item">
+                <div class="catalog-item__wrapper">
+                    <div class="catalog-item__content catalog-item__content_active">
+                      <img src="" alt="" class="catalog-item__img">
+                      <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
+                      <div class="catalog-item__descr">Для первых шагов в тренировк, основанных на сердечном ритме</div>
+                      <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                    </div>
+                    
+                    <ul class="catalog-item__list">
+                     <li>asf,l;as,f;las,
+                         f;sa,f;sa</li>
+                     <li>safsafsafsasfasfsafsafsasaf
+                         fafsaf</li>
+                     <li>safasfasfasf,;as,;salf
+                         sadasdsadsad
+                     </li>
+                     <a href="#" class="catalog-item-back">назад</a>
+                    </ul>
+                </div>
+                
+                <hr>
+
+                <div class="catalog-item__footer">
+                    <div class="catalog-item__prices">
+                        <div class="catalog-item__old-price">4 750 руб</div>
+                        <div class="catalog-item__price">4 500 руб</div>
+                    </div>
+                    <button class="button button_mini">КУПИТЬ</button>
+                </div>
+               </div>
+               <div class="catalog-item">
+                <div class="catalog-item__wrapper">
+                    <div class="catalog-item__content catalog-item__content_active">
+                      <img src="" alt="" class="catalog-item__img">
+                      <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
+                      <div class="catalog-item__descr">Для первых шагов в тренировк, основанных на сердечном ритме</div>
+                      <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                    </div>
+                    
+                    <ul class="catalog-item__list">
+                     <li>asf,l;as,f;las,
+                         f;sa,f;sa</li>
+                     <li>safsafsafsasfasfsafsafsasaf
+                         fafsaf</li>
+                     <li>safasfasfasf,;as,;salf
+                         sadasdsadsad
+                     </li>
+                     <a href="#" class="catalog-item-back">назад</a>
+                    </ul>
+                </div>
+                
+                <hr>
+
+                <div class="catalog-item__footer">
+                    <div class="catalog-item__prices">
+                        <div class="catalog-item__old-price">4 750 руб</div>
+                        <div class="catalog-item__price">4 500 руб</div>
+                    </div>
+                    <button class="button button_mini">КУПИТЬ</button>
+                </div>
+               </div>
+               <div class="catalog-item">
+                <div class="catalog-item__wrapper">
+                    <div class="catalog-item__content catalog-item__content_active">
+                      <img src="" alt="" class="catalog-item__img">
+                      <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
+                      <div class="catalog-item__descr">Для первых шагов в тренировк, основанных на сердечном ритме</div>
+                      <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                    </div>
+                    
+                    <ul class="catalog-item__list">
+                     <li>asf,l;as,f;las,
+                         f;sa,f;sa</li>
+                     <li>safsafsafsasfasfsafsafsasaf
+                         fafsaf</li>
+                     <li>safasfasfasf,;as,;salf
+                         sadasdsadsad
+                     </li>
+                     <a href="#" class="catalog-item-back">назад</a>
+                    </ul>
+                </div>
+                
+                <hr>
+
+                <div class="catalog-item__footer">
+                    <div class="catalog-item__prices">
+                        <div class="catalog-item__old-price">4 750 руб</div>
+                        <div class="catalog-item__price">4 500 руб</div>
+                    </div>
+                    <button class="button button_mini">КУПИТЬ</button>
+                </div>
+               </div>
+               <div class="catalog-item">
+                <div class="catalog-item__wrapper">
+                    <div class="catalog-item__content catalog-item__content_active">
+                      <img src="" alt="" class="catalog-item__img">
+                      <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
+                      <div class="catalog-item__descr">Для первых шагов в тренировк, основанных на сердечном ритме</div>
+                      <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                    </div>
+                    
+                    <ul class="catalog-item__list">
+                     <li>asf,l;as,f;las,
+                         f;sa,f;sa</li>
+                     <li>safsafsafsasfasfsafsafsasaf
+                         fafsaf</li>
+                     <li>safasfasfasf,;as,;salf
+                         sadasdsadsad
+                     </li>
+                     <a href="#" class="catalog-item-back">назад</a>
+                    </ul>
+                </div>
+                
+                <hr>
+
+                <div class="catalog-item__footer">
+                    <div class="catalog-item__prices">
+                        <div class="catalog-item__old-price">4 750 руб</div>
+                        <div class="catalog-item__price">4 500 руб</div>
+                    </div>
+                    <button class="button button_mini">КУПИТЬ</button>
+                </div>
+               </div>
+           </div>
+           
+           <div class="catalog__content">
+            <div class="catalog-item">
+                <div class="catalog-item__wrapper">
+                    <div class="catalog-item__content catalog-item__content_active">
+                      <img src="" alt="" class="catalog-item__img">
+                      <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
+                      <div class="catalog-item__descr">Для первых шагов в тренировк, основанных на сердечном ритме</div>
+                      <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                    </div>
+                    
+                    <ul class="catalog-item__list">
+                     <li>asf,l;as,f;las,
+                         f;sa,f;sa</li>
+                     <li>safsafsafsasfasfsafsafsasaf
+                         fafsaf</li>
+                     <li>safasfasfasf,;as,;salf
+                         sadasdsadsad
+                     </li>
+                     <a href="#" class="catalog-item-back">назад</a>
+                    </ul>
+                </div>
+                
+                <hr>
+
+                <div class="catalog-item__footer">
+                    <div class="catalog-item__prices">
+                        <div class="catalog-item__old-price">4 750 руб</div>
+                        <div class="catalog-item__price">4 500 руб</div>
+                    </div>
+                    <button class="button button_mini">КУПИТЬ</button>
+                </div>
+               </div>
+           </div>
+           
+           <div class="catalog__content">
+            <div class="catalog-item">
+                <div class="catalog-item__wrapper">
+                    <div class="catalog-item__content catalog-item__content_active">
+                      <img src="" alt="" class="catalog-item__img">
+                      <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
+                      <div class="catalog-item__descr">Для первых шагов в тренировк, основанных на сердечном ритме</div>
+                      <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                    </div>
+                    
+                    <ul class="catalog-item__list">
+                     <li>asf,l;as,f;las,
+                         f;sa,f;sa</li>
+                     <li>safsafsafsasfasfsafsafsasaf
+                         fafsaf</li>
+                     <li>safasfasfasf,;as,;salf
+                         sadasdsadsad
+                     </li>
+                     <a href="#" class="catalog-item-back">назад</a>
+                    </ul>
+                </div>
+                
+                <hr>
+
+                <div class="catalog-item__footer">
+                    <div class="catalog-item__prices">
+                        <div class="catalog-item__old-price">4 750 руб</div>
+                        <div class="catalog-item__price">4 500 руб</div>
+                    </div>
+                    <button class="button button_mini">КУПИТЬ</button>
+                </div>
+               </div>
+               <div class="catalog-item">
+                <div class="catalog-item__wrapper">
+                    <div class="catalog-item__content catalog-item__content_active">
+                      <img src="" alt="" class="catalog-item__img">
+                      <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
+                      <div class="catalog-item__descr">Для первых шагов в тренировк, основанных на сердечном ритме</div>
+                      <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                    </div>
+                    
+                    <ul class="catalog-item__list">
+                     <li>asf,l;as,f;las,
+                         f;sa,f;sa</li>
+                     <li>safsafsafsasfasfsafsafsasaf
+                         fafsaf</li>
+                     <li>safasfasfasf,;as,;salf
+                         sadasdsadsad
+                     </li>
+                     <a href="#" class="catalog-item-back">назад</a>
+                    </ul>
+                </div>
+                
+                <hr>
+
+                <div class="catalog-item__footer">
+                    <div class="catalog-item__prices">
+                        <div class="catalog-item__old-price">4 750 руб</div>
+                        <div class="catalog-item__price">4 500 руб</div>
+                    </div>
+                    <button class="button button_mini">КУПИТЬ</button>
+                </div>
+               </div>   
+           </div>
+        </div>
+
+    </section>
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+     -->
+    <script src="js/script.js"></script>
+
+    <footer class="footer">
+        <!-- <div class="footer__map"></div> -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000.4663914356724!2d69.20868381479146!3d41.23339761349114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae61947afb5fb3%3A0x4eb5241eda3b95f1!2sSergeli%20Moshina%20Bozor!5e0!3m2!1sru!2s!4v1607882034361!5m2!1sru!2s" width="100%" height="630" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <div class="footer__info">
+            <address class="footer__addr">Москва, Мясницкий проезд</address>
+            <a class="footer__phone" href="tel: +998994381501">+998994381501</a>
+        </div>
+    </footer>
+
+    <div class="overlay">
+        <div class="modal" id="consultation">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Просто заполните форму заявки</div>
+            <div class="modal__descr">Мы вам перезвоним через 10 минут</div>
+            <form class="feed-form" action="#">
+                <input name="name" required placeholder="Ваше Имя" type="text">
+                <input name="name" required placeholder="Ваш телефон" type="number">
+                <input name="name" required placeholder="Ваш Email" type="email">
+    
+                <button class="button button_submit">Заказать консультацию</button>
+            </form>
+        </div>
+
+        <div class="modal" id="order">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Ваш заказ:</div>
+            <div class="modal__descr">Пульсометр Polar FT1</div>
+            <form class="feed-form" action="#">
+                <input name="name" required placeholder="Ваше Имя" type="text">
+                <input name="name" required placeholder="Ваш телефон" type="number">
+                <input name="name" required placeholder="Ваш Email" type="email">
+    
+                <button class="button button_submit">купить</button>
+            </form>
+        </div>
+
+        <div class="modal" id="thanks">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Спасибо за вашу заявку</div>
+            <div class="modal__descr">Наш менеджер свяжется с вами в ближайшее время</div>
+        </div>
+    </div>
 </body>
 </html>
