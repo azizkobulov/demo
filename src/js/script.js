@@ -41,7 +41,67 @@
           $('.overlay, #order').fadeIn('slow');
         });
       });
-  }); 
+      
+     /*  $('#consultation-form').validate();
+      $('#consultation form').validate({
+        rules: {
+            name: {
+              required: true,
+              minlength: 2
+            },
+            number: "required",
+            email:{
+                required: true,
+                email: true
+          }
+        },
+        messages: {
+          name: {
+            required: "Пожалуйста, введите своё имя",
+            minlength: jQuery.validator.format("Введите {0} символов")
+          },
+          number: "Пожалуйста, введите свой номер телефона",
+          email: {
+            required: "Пожалуйста, введите свою почту",
+            email: "Неправильно введён адрес почты"
+          }
+        }
+      });
+      $('#order form').validate(); */
+
+      function validateForms(form){
+        $(form).validate({
+          rules: {
+              name: {
+                required: true,
+                minlength: 2
+              },
+              number: "required",
+              email:{
+                  required: true,
+                  email: true
+            }
+          },
+          messages: {
+            name: {
+              required: "Пожалуйста, введите своё имя",
+              minlength: jQuery.validator.format("Введите {0} символов")
+            },
+            number: "Пожалуйста, введите свой номер телефона",
+            email: {
+              required: "Пожалуйста, введите свою почту",
+              email: "Неправильно введён адрес почты"
+            }
+          }
+        });
+      };
+      validateForms('#consultation-form');
+      validateForms('#consultation form');
+      validateForms('#order form');
+      
+      $('input[name=number]').mask(" (99) 999 -- 99 -- 99");
+
+}); 
  /*  var slider = tns({
     container: '.carousel__inner',
     items: 1,

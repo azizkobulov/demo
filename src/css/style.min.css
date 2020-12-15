@@ -267,6 +267,17 @@
   color: white;
 }
 
+.consultation .error {
+  border: 1px solid red;
+}
+
+.consultation label.error {
+  color: #ffffff;
+  border: none;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
 .consultation .title_left {
   text-transform: uppercase;
   text-align: left;
@@ -591,6 +602,16 @@
   font-size: 14px;
   text-align: center;
   margin-top: 15px;
+}
+
+.modal .error {
+  border: 1px solid red;
+}
+
+.modal label.error {
+  border: none;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 #consultation, #order, #thanks {
