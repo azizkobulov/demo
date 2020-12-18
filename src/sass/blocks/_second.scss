@@ -1,0 +1,42 @@
+.second{
+    min-height: 325px;
+    padding: 41px 0 91px 0;
+    background-color: rgba(228, 218, 218, 0.781);
+    h2{
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__icons{
+        margin-top: 70px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__icon{
+        width: 190px;
+        color:black;
+        font-size: 14px;
+        .header{
+            text-align: center;
+            font-weight: 700;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .subheader{
+            text-align: center;
+            font-weight: 300;
+            margin-top: 30px;
+        }
+        img{
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            animation-name: heartbeat;
+            animation-duration: 1s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+            &:hover{
+                animation-play-state: paused;
+            }
+        }
+    }
+}
